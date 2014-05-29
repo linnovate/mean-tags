@@ -1,0 +1,9 @@
+<div class="tags">
+	<div class="autocomplete">
+		<span class="tag" data-ng-repeat="tag in meanTags track by $index">{{tag.title}}
+			<span class="remove" data-ng-click="removeTag($index)">X</span>
+		</span>
+		<input type="text" id="tagInput" class="data" data-ng-model="tag" value="" data-ng-blur="addTag()">
+		<span class="option" data-ng-if="tag && option.title">{{option.title | autoCompleteTags:tag}}</span>
+	</div>
+</div>
